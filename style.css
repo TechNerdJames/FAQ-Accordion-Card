@@ -4,10 +4,17 @@ html {
 	min-height: 100%;
 }
 
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
 body {
 	margin: 0;
 	padding: 10rem 1rem;
 	font-family: 'Kumbh Sans', sans-serif;
+	font-weight: 400;
 	font-size: 0.75rem;
 	color: hsl(238, 29%, 16%);
 	background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
@@ -75,7 +82,7 @@ h3 {
 	background: transparent;
 	font-family: 'Kumbh Sans', sans-serif;
 	font-size: 0.875rem;
-	padding: 0;
+	padding: 0 1rem;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -89,10 +96,13 @@ h3 {
 	background-image: url('/images/icon-arrow-down.svg');
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-position: center;
+	background-position: right;
 	display: block;
 	width: 0.625rem;
 	height: 0.625rem;
+	margin-left: 3rem;
+	border: none;
+	transition: transform 300ms ease-in-out;
 }
 
 .accordion-question:hover {
@@ -110,7 +120,25 @@ h3 {
 
 .content {
 	line-height: 1.4;
+	padding: 0 1rem;
+	margin-right: 2rem;
+	max-height: 0;
+	overflow: hidden;
 }
+
+.accordion-question.open {
+	font-weight: 700;
+}
+
+.accordion-question.open::after {
+	transform: rotate(180deg);
+}
+
+.content.open {
+	max-height: 6.25rem;
+}
+
+/* Desktop Styles */
 
 @media (min-width: 62em) {
 	body {
