@@ -26,13 +26,8 @@ h1 {
 	text-align: center;
 }
 
-h2 {
-	margin-bottom: 0;
-}
-
 h1,
-h2,
-h3 {
+button {
 	margin-top: 0;
 }
 
@@ -88,6 +83,8 @@ h3 {
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
 	text-align: left;
 }
 
@@ -109,11 +106,6 @@ h3 {
 	color: hsl(14, 88%, 65%);
 }
 
-.label {
-	margin-bottom: 1rem;
-	margin-top: 1rem;
-}
-
 .arrow-down {
 	display: inline-block;
 }
@@ -124,6 +116,11 @@ h3 {
 	margin-right: 2rem;
 	max-height: 0;
 	overflow: hidden;
+	transition: max-height 300ms ease;
+}
+
+.content p {
+	margin-top: 0;
 }
 
 .accordion-question.open {
@@ -136,6 +133,12 @@ h3 {
 
 .content.open {
 	max-height: 6.25rem;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	color: hsl(228, 45%, 44%);
 }
 
 /* Desktop Styles */
