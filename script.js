@@ -4,6 +4,13 @@ question.forEach((button) => {
 	button.addEventListener('click', (e) => {
 		button.classList.toggle('open');
 		button.nextElementSibling.classList.toggle('open');
+		// if (button.classList.contains('open')) {
+		// 	button.classList.remove('open');
+		// 	button.nextElementSibling.classList.remove('open');
+		// } else {
+		// 	button.classList.toggle('open');
+		// 	button.nextElementSibling.classList.toggle('open');
+		// }
 	});
 });
 
